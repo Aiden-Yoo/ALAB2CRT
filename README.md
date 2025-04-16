@@ -1,6 +1,6 @@
 # ALAB2CRT
 
-ALAB2CRT is a tool that converts sessions from Arista Networks' various lab environments (ACT, ATD) into SecureCRT-compatible format.
+ALAB2CRT is a tool that creates sessions from Arista Networks' various lab environments (ACT, ATD) into SecureCRT-compatible format.
 
 ## Features
 
