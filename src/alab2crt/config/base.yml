@@ -1,27 +1,48 @@
----
 #####################################################
-##   SecureCRT sessions root directory parameter   ##
+##   SecureCRT Sessions Configuration File   ##
 #####################################################
 #
-# SecureCRT's session data directory. Keep it blank if not changed default path.
-# Or not, putting in the changed path is required referring to the below format.
-# [Default directory by operating system]
-#  - Windows: C:\Documents and Settings\{USER_NAME}\Application Data\VanDyke\Config\Sessions
-#  - Mac    : /Users/{USER_NAME}/Library/Application Support/VanDyke/SecureCRT/Config/Sessions
+# This file contains the base configuration for ALAB2CRT.
+# It defines the directory structure and provider settings.
+#
+# Required parameters:
+#   - crt_path: The root directory for SecureCRT sessions
+#   - directory: Directory structure for each provider
+#
+# Note:
+#   - If crt_path is not specified, the default path will be used:
+#     - Windows: C:\Documents and Settings\{USER_NAME}\Application Data\VanDyke\Config\Sessions
+#     - Mac    : /Users/{USER_NAME}/Library/Application Support/VanDyke/SecureCRT/Config/Sessions
+#   - The directory structure will be created automatically under the crt_path
+#
+# Directory structure:
+#   crt_path
+#     └ top_dir            : Top-level directory for each provider
+#        ├ dirA            : Lab-specific directories
+#        ⎪  └ jumphost_dir : Directory for jumphost sessions
+#        ├ dirB
+#        └ ...
+#
 crt_path: 
 
 ##########################################
-##   SecureCRT session path parameter   ##
+##   Directory Configuration   ##
 ##########################################
 #
-# Three directories will be created in the crt_path. The directory hierarchy is as follows:
-#   crt_path
-#     └ top_dir            : Top-level directory used by ALAB2CRT
-#        ├ dirA            : Directories will be created according to the status of lab reservation when execute ALAB2CRT.
-#        ⎪  └ jumphost_dir : Directory for jumphost
-#        ├ dirB
-#        └ ...
+# Defines the directory structure for each provider.
+# Each provider has its own top-level directory and jumphost directory.
+#
 directory:
+  # ATD (Arista Test Drive) provider settings
   atd:
+    # Top-level directory for ATD sessions
     top_dir: ATD
+    # Directory for ATD jumphost sessions
+    jumphost_dir: jumphost
+
+  # ACT (Arista Cloud Test) provider settings
+  act:
+    # Top-level directory for ACT sessions
+    top_dir: ACT
+    # Directory for ACT jumphost sessions
     jumphost_dir: jumphost 

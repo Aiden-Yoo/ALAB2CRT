@@ -13,10 +13,12 @@ class SessionConfig:
     config_path: str
     base_config: Dict = field(default_factory=dict)
     atd_config: Dict = field(default_factory=dict)
+    act_config: Dict = field(default_factory=dict)
 
     def __post_init__(self):
         self.base_config = self._load_config("base.yml")
         self.atd_config = self._load_config("atd.yml")
+        self.act_config = self._load_config("act.yml")
 
     def _load_config(self, filename: str) -> dict:
         config_file = os.path.join(self.config_path, filename)
@@ -42,13 +44,16 @@ class SessionConfig:
     def get_provider_config(self, provider: str) -> Dict:
         if provider == "atd":
             return self.atd_config
+        elif provider == "act":
+            return self.act_config
         raise ValueError(f"Unknown provider: {provider}")
 
     def to_dict(self) -> Dict:
         return {
             "crt_path": self.crt_path,
             "directory": self.base_config["directory"],
-            "atd": self.atd_config
+            "atd": self.atd_config,
+            "act": self.act_config
         }
 
 @dataclass

@@ -1,0 +1,31 @@
+##########################################
+##   ACT Provider Configuration File   ##
+##########################################
+#
+# This file contains the configuration for the ACT provider.
+# ACT (Arista Cloud Test) is a cloud-based lab environment provided by Arista.
+#
+# Required parameters:
+#   - api_url: The base URL of the ACT API
+#   - api_key: Your API key for authentication
+#   - act_username: Your ACT username
+#
+# Example:
+#   api_url: "https://ce.act.arista.com"
+#   api_key: "your-api-key-here"
+#   act_username: "your-username"
+#
+# Note:
+#   - The API key can be obtained from your ACT account settings
+#   - The username should match your ACT account username
+#   - The directory structure is defined in base.yml
+#
+act:
+  # Base URL for ACT API
+  api_url: "https://ce.act.arista.com"
+  
+  # Your API key for authentication
+  api_key: ""
+  
+  # Your ACT username
+  act_username: ""

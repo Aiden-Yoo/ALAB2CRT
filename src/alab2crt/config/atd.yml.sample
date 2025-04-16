@@ -1,18 +1,28 @@
----
-##############################
-##   ATD server parameter   ##
-##############################
+##########################################
+##   ATD Provider Configuration File   ##
+##########################################
 #
-# atd:
-#   - topology: ddc (Dual Data Center) / ar (Advanced Routing) / c (Campus)
-#     lab: lab's name. [Event Name]-x-xxxxxxxx
-#     username: device's username.
-#     password: device's password.
-#   - topology: 
-#     lab: 
-#     username: 
-#     password: 
-#   - ...
+# This file contains the configuration for the ATD provider.
+# ATD (Arista Test Drive) is a lab environment provided by Arista.
+#
+# Required parameters for each lab:
+#   - lab: ATD lab name (e.g., "[Event Name]-x-xxxxxxxx")
+#   - username: ATD lab username
+#   - password: ATD lab password
+#   - topology: The topology type [ddc (Dual Data Center) / ar (Advanced Routing) / c (Campus)]
+#
+# Example:
+#   atd:
+#     - topology: ddc
+#       lab: test-1-abcd1234
+#       username: arista
+#       password: arista1234
+#
+# Note:
+#   - The lab name should match the name in ATD
+#   - The topology is used to determine device types and IP addresses
+#   - The directory structure is defined in base.yml
+#
 atd:
   - topology: 
     lab: 

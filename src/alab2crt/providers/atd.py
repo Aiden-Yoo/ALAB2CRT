@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 from typing import Dict, List, Any
 from alab2crt.core.session import Session, SessionConfig
