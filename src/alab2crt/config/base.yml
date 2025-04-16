@@ -1,0 +1,27 @@
+---
+#####################################################
+##   SecureCRT sessions root directory parameter   ##
+#####################################################
+#
+# SecureCRT's session data directory. Keep it blank if not changed default path.
+# Or not, putting in the changed path is required referring to the below format.
+# [Default directory by operating system]
+#  - Windows: C:\Documents and Settings\{USER_NAME}\Application Data\VanDyke\Config\Sessions
+#  - Mac    : /Users/{USER_NAME}/Library/Application Support/VanDyke/SecureCRT/Config/Sessions
+crt_path: 
+
+##########################################
+##   SecureCRT session path parameter   ##
+##########################################
+#
+# Three directories will be created in the crt_path. The directory hierarchy is as follows:
+#   crt_path
+#     └ top_dir            : Top-level directory used by ALAB2CRT
+#        ├ dirA            : Directories will be created according to the status of lab reservation when execute ALAB2CRT.
+#        ⎪  └ jumphost_dir : Directory for jumphost
+#        ├ dirB
+#        └ ...
+directory:
+  atd:
+    top_dir: ATD
+    jumphost_dir: jumphost 

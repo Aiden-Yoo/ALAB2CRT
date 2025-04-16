@@ -1,0 +1,23 @@
+[project]
+name = "alab2crt"
+version = "0.1.0"
+description = "SecureCRT session generator for lab resources"
+authors = [
+    {name = "Aiden Yoo", email = "you1367@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "crtgen @ git+https://github.com/Aiden-Yoo/CRTGen"
+]
+
+[tool.poetry]
+packages = [{include = "alab2crt", from = "src"}]
+
+[project.scripts]
+alab2crt = "alab2crt.cli:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

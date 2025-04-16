@@ -1,0 +1,95 @@
+---
+##############################
+##   ATD server parameter   ##
+##############################
+#
+# atd:
+#   - topology: ddc (Dual Data Center) / ar (Advanced Routing) / c (Campus)
+#     lab: lab's name. [Event Name]-x-xxxxxxxx
+#     username: device's username.
+#     password: device's password.
+#   - topology: 
+#     lab: 
+#     username: 
+#     password: 
+#   - ...
+atd:
+  - topology: 
+    lab: 
+    username: 
+    password: 
+  - topology: 
+    lab: 
+    username: 
+    password: 
+
+##########################################
+##      LAB information parameter       ##
+##########################################
+#
+type:
+  ddc:
+    s1-brdr1: 100
+    s1-brdr2: 101
+    s1-core1: 102
+    s1-core2: 103
+    s1-host1: 16
+    s1-host2: 17
+    s1-leaf1: 12
+    s1-leaf2: 13
+    s1-leaf3: 14
+    s1-leaf4: 15
+    s1-spine1: 10
+    s1-spine2: 11
+    s2-brdr1: 200
+    s2-brdr2: 201
+    s2-core1: 202
+    s2-core2: 203
+    s2-host1: 26
+    s2-host2: 27
+    s2-leaf1: 22
+    s2-leaf2: 23
+    s2-leaf3: 24
+    s2-leaf4: 25
+    s2-spine1: 20
+    s2-spine2: 21
+  ar:
+    eos1: 10
+    eos2: 11
+    eos3: 12
+    eos4: 13
+    eos5: 14
+    eos6: 15
+    eos7: 16
+    eos8: 17
+    eos9: 18
+    eos10: 19
+    eos11: 20
+    eos12: 21
+    eos13: 22
+    eos14: 23
+    eos15: 24
+    eos16: 25
+    eos17: 26
+    eos18: 27
+    eos19: 28
+    eos20: 29
+  c:
+    host-1: 22
+    host-2: 23
+    host-3: 24
+    host-4: 25
+    host-5: 26
+    host-6: 27
+    leaf-1a: 14
+    leaf-1b: 15
+    leaf-2a: 16
+    leaf-3a: 17
+    leaf-3b: 18
+    member-leaf-3c: 19
+    member-leaf-3d: 20
+    member-leaf-3e: 21
+    router-1: 10
+    router-2: 11
+    spine-1: 12
+    spine-2: 13 
