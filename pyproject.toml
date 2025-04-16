@@ -17,7 +17,7 @@ dependencies = [
 packages = [{include = "alab2crt", from = "src"}]
 
 [project.scripts]
-alab2crt = "alab2crt.cli:main"
+alab2crt = "alab2crt.main:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

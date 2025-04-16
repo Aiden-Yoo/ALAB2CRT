@@ -1,7 +1,7 @@
 import os
 import argparse
 import shutil
-from crtgen.crt import CRT
+from crtgen import CRT
 from alab2crt.core.session import SessionConfig
 from alab2crt.providers.atd import ATDProvider
 from alab2crt.providers.act import ACTProvider
